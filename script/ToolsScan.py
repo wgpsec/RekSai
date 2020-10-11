@@ -47,10 +47,10 @@ class GetIG(object):
                 self.origin.append('纯IP不判断CDN')
                 return ['纯IP不判断CDN',re.findall(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}',domain)[0]]
             else:
-                code_list = [302, 200, 301, 401]
+                code_list = [200]
                 make = subprocess.getoutput('curl -o /dev/null -s -w "%%{http_code}\n" %s' % self.domain)
                 if int(make) not in code_list:
-                    print('\033[32m[WARR]\033[0m 域名失活，退出扫描\n')
+                    print('\033[32m[WARR]\033[0m 域名失活，或者协议输入错误，退出扫描\n')
                     sys.exit()
                 else:
                     url = 'http://seo.chinaz.com/' + re.findall(r'\w{3}.\w{1,50}.\w{2,3}',domain)[0]

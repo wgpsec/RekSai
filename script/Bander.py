@@ -32,6 +32,6 @@ def Toolsbander():
         pass
     else:
         quit()
-    return '\033[32m[Abaokris say:]\033[0m Enjoy！\n'
+    return '\033[32m[示例URL]\033[0m http://www.baidu.com 记住，一定要确定协议！\n'
 
 print(Toolsbander())

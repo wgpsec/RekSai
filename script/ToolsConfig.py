@@ -5,11 +5,12 @@ import os
 class Config(object):
     def __init__(self):
         self.Tools = ['masscan','OneForAll','nmap','dirmap']
-        self.path = os.getcwd() + '/tools'
+        self.path = os.getcwd()
 
     def tools(self):
         print('\033[33m[WARN]\033[0m Downloading Toolkit...')
-        if len(subprocess.getoutput('find %s -name dirmap' % self.path)) == 0:
+        a = subprocess.getoutput('find %s -name dirmap' % self.path)
+        if len(a) == 0:
             DownLoad = subprocess.getoutput('git clone https://gitee.com/abaokris/tools.git;'
                                             'yum -y install unzip whois;'
                                             'apt-get -y install unzip whois;'
@@ -17,7 +18,7 @@ class Config(object):
                                             'python3 -m pip install request bs4  -i https://pypi.tuna.tsinghua.edu.cn/simple')
 
             for Tool in self.Tools:
-                FinTool = subprocess.getoutput('find %s -name %s' % (self.path,Tool))
+                FinTool = subprocess.getoutput('find %s/tools -name %s' % (self.path,Tool))
                 if str(FinTool).find(Tool) != -1 :
                     rm_zip = subprocess.getoutput('cd tools;'
                                                   'rm -rf %s.zip' % Tool)
