@@ -1,10 +1,11 @@
+import requests
 import subprocess
 import sys
 import os
 
 class Config(object):
     def __init__(self):
-        self.Tools = ['masscan','OneForAll','nmap','dirmap']
+        self.Tools = ['masscan','OneForAll','jsfinder','dirmap']
         self.path = os.getcwd()
 
     def tools(self):
@@ -46,9 +47,6 @@ class Config(object):
                                                     'cd OneForAll/;'
                                                     'python -m pip install -U pip setuptools wheel -i https://mirrors.aliyun.com/pypi/simple/;'
                                                     'pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/')
-
-                    elif Tool == 'nmap':
-                        make = subprocess.getoutput('yum -y install nmap')
                     else:
                         unzip = subprocess.getoutput('cd tools;'
                                                      'unzip %s.zip' % Tool)
@@ -58,8 +56,6 @@ class Config(object):
 
         else:
             print('\033[34m[OUT] \033[0m 工具检测完成！\n')
-
-
 
     def gopath(self):
         print('\033[33m[WARR]\033[0m golang environmental testing...')
@@ -75,3 +71,13 @@ class Config(object):
             return '\033[34m[OUT] \033[0m 语言环境检测完成！\n'
         else:
             print('\033[34m[OUT] \033[0m 语言环境检测完成！\n')
+
+    def servertool(self,title,content):
+        api = "填写你的server酱地址"
+        data = {
+            "text": title,
+            "desp": content
+        }
+        req = requests.post(api, data=data)
+        sys.exit()
+
