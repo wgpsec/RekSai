@@ -29,7 +29,7 @@ def get_other():
 while True:
     if __name__ == '__main__':
         while True:
-            try:
+            #try:
                 if os.path.isfile(os.getcwd() + '/url.txt') == True:
                     with open('url.txt', 'r+') as f:
                         s = 0
@@ -57,7 +57,6 @@ while True:
                                 s += 1
                             else:
                                 s += 1
-                                print('域名失活，下一个')
                                 continue
                         else:
                             title = "所有任务扫描结束！你还在等什么？"
@@ -88,8 +87,8 @@ while True:
                     end_time = time.time()
                     print('\n\033[34m[SCAN]\033[0m 总耗时%s S' % (end_time - start_time))
 
-            except Exception as information:
-                title = "出现未知异常！"
-                content = "出现了未知异常，请将你的错误信息提交到github上哦！"
-                seeting.servertool(title, content)
-                sys.exit()
+            # #except Exception as information:
+            #     title = "出现未知异常！"
+            #     content = "出现了未知异常，请将你的错误信息提交到github上哦！"
+            #     seeting.servertool(title, content)
+            #     sys.exit()

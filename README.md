@@ -16,15 +16,17 @@
 
 1. 除了`python3`你不需要自己安装任何一个东西，它能够自动帮你部署所有的环境和工具，除了第一次加载比较慢以外:smile:
 
-2. 工具的原理是通过用户输入的``URL`进行信息收集，包括但不限于whois，域名对应的IP，端口、敏感目录、C段、C段的IP对应端口等
+2. 工具的原理是通过用户输入的`URL`进行信息收集，包括但不限于whois，域名对应的IP，端口、敏感目录、C段、C段的IP对应端口等
 
 3. 但是只能在Liunx下使用！
 
 4. 使用的时候先去server酱注册一个账号，绑定微信，将授权码放在下面，server地址：http://sc.ftqq.com/：
 
-   ![](images/peizhi.png)
+   ![](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/peizhi.4ox1yakcog3k.png)
 
-   ![](images/server.png)
+   ![](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/server.30jk5ihyl6yo.png)
+   
+   ![](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/Screenshot_2020-11-10-14-51-59-560_com.tencent.mm.6q0b2xsiw2yo.jpg)
 
 ## 使用方式
 
@@ -42,15 +44,15 @@
    nohup python3 RekSai.py &
    ```
 
-   **`使用批量的方式一定要在url.txt文件中添加你的域名或者ip，格式为www.xxx.com和123.123.123.123，不需要协议，单个扫描的华只需要清空url.txt即可！`**
+   > 使用批量的方式需要在当前目录下添加一个url.txt文件，并且需要配置一下server酱！
 
    
 
    进入工具以后，你只需要输入自己的想要扫描的`URL`就行了。
 
-   理论上支持加上端口，比如`http://www.baidu.com:8080`但是避免一些不必要的问题出现，还是不要用的好 /dog
+   理论上支持加上端口，比如`www.baidu.com:8080`但是避免一些不必要的问题出现，还是不要用的好 /dog
 
-2. 如果你发现你的域名是上面的格式，但是确实没有回显的话，那么请一定要``Issue`到github上。
+2. 如果你发现你的域名是上面的格式，但是确实没有回显的话，那么请一定要`Issue`到github上。
 
 3. CDN的判断基本上算是没啥篮子用，CDN的判断和C段的扫描挂钩，但是我整不出CDN的判断。所以只要C段IP超过10个默认就不扫描C段的IP端口了，你可以在总结文本中找到C段IP。
 
@@ -63,25 +65,25 @@
 ## 使用截图：
 
 * 域名失活：
-  ![1.png](images/1.png)
+  ![1.png](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/1.77gb7darp9mo.png)
 
 * 国外：
-  ![2](images/2.png)
-  ![3](images/3.png)
+  ![2](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/2.4s2kzvfwvd34.png)
+  ![3](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/3.54v016w1ga9s.png)
   ![4](images/4.png)
-  ![5](images/5.png)
+  ![5](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/4.75hik8wc0rcw.png)
 
-* ![6](images/6.png)
+* ![6](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/6.23vb4844dbz4.png)
 
   总结文件：
-  ![7](images/7.png)
+  ![7](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/7.53yb6vy1btkw.png)
 
 * 国内：
 
-  ![8](images/8.png)
-  ![9](images/9.png)
+  ![8](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/8.6n5wl7qykutc.png)
+  ![9](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/9.13x3ixpglxy8.png)
 
-  ![10](images/10.png)
+  ![10](https://cdn.jsdelivr.net/gh/Abao520/imaegs@main/20201110/10.59b79lpeiveo.png)
 
   
 

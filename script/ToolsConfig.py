@@ -73,7 +73,7 @@ class Config(object):
             print('\033[34m[OUT] \033[0m 语言环境检测完成！\n')
 
     def servertool(self,title,content):
-        api = "填写你的server酱地址"
+        api = "这里填写server地址！"
         data = {
             "text": title,
             "desp": content

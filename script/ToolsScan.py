@@ -43,7 +43,7 @@ class GetIG(object):
             if len(re.findall(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}',self.domain)) > 0:
                 print('\033[31m[WARR]\033[0m 反查IP中')
                 url = 'https://webscan.cc/ip_' + re.findall(r'\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}',self.domain)[0]
-                data = requests.get(url, headers=headers).text
+                data = requests.get(url, headers=headers,verify=False).text
                 soup = BeautifulSoup(data, 'html.parser')
                 for word in soup.find_all('li', class_='J_link'):
                     self.domain_list.append(word)
@@ -285,7 +285,7 @@ class GetIG(object):
                     f.write('\t'+self.domain+':'+str(i)+'\n')
                 f.write('\n扫描到的敏感路径：\n')
                 for i in sensitive_directory:
-                    f.write('\t'+self.domain+i+'\n')
+                    f.write('\t'+i+'\n')
             else:
                 f.write('\n当前网站C段地址：\n')
                 for i in c_ip_list:
@@ -301,7 +301,7 @@ class GetIG(object):
                     f.write('\t'+self.domain+':'+str(i)+'\n')
                 f.write('\n扫描到的敏感路径：\n')
                 for i in sensitive_directory:
-                    f.write('\t'+self.domain+i+'\n')
+                    f.write('\t'+i+'\n')
             f.close()
 
         return '\n\033[32m[NICE]\033[0m 数据处理完毕！整理的数据存放在%s目录下的summary.txt文件中' % self.result
