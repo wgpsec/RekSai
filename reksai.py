@@ -86,9 +86,3 @@ while True:
                     print(domain.Result())
                     end_time = time.time()
                     print('\n\033[34m[SCAN]\033[0m 总耗时%s S' % (end_time - start_time))
-
-            # #except Exception as information:
-            #     title = "出现未知异常！"
-            #     content = "出现了未知异常，请将你的错误信息提交到github上哦！"
-            #     seeting.servertool(title, content)
-            #     sys.exit()
